@@ -1,0 +1,29 @@
+{
+    "name": "proficlos/validators",
+    "description": "Simple validators",
+    "require": {
+        "php": ">=7.1",
+        "nette/utils": "^2.4 || ^3.0",
+        "nette/forms": "^2.4 || ^3.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "homepage": "https://github.com/ProfiCloS/validators",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PROFI CLOUD SERVICES",
+            "email": "info@profiservices.cloud"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "config": {
+        "platform": {
+            "php": "7.1"
+        }
+    }
+}
