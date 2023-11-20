@@ -2,9 +2,9 @@
     "name": "proficlos/validators",
     "description": "Simple validators",
     "require": {
-        "php": ">=7.1",
-        "nette/utils": "^2.4 || ^3.0",
-        "nette/forms": "^2.4 || ^3.0"
+        "php": ">=8.2",
+        "nette/utils": "^4.0",
+        "nette/forms": "^3.1"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -23,7 +23,7 @@
     },
     "config": {
         "platform": {
-            "php": "7.1"
+            "php": "8.2"
         }
     }
 }

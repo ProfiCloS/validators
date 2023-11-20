@@ -1,12 +1,12 @@
 <?php
 namespace ProfiCloS;
 
-use function count;
+use Nette\Forms\Control;
 use Exception;
-use Nette\Forms\IControl;
 use Nette\Utils\ArrayHash;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
+use function count;
 use function strlen;
 
 class Validators extends \Nette\Utils\Validators
@@ -17,17 +17,17 @@ class Validators extends \Nette\Utils\Validators
 	public const DATE_RANGE = 'ProfiCloS\Validators::validateDateRange';
 	public const IDENTIFICATION_NUMBER = 'ProfiCloS\Validators::validateIdentificationNumber';
 
-	public static function validatePassword(IControl $control): bool
+	public static function validatePassword(Control $control): bool
 	{
 		return self::isPasswordStrength($control->getValue());
 	}
 
-	public static function validateDate(IControl $control): bool
+	public static function validateDate(Control $control): bool
 	{
 		return self::isDate($control->getValue());
 	}
 
-	public static function validateIdentificationNumber(IControl $control): bool
+	public static function validateIdentificationNumber(Control $control): bool
 	{
 		return self::isIdentificationNumber($control->getValue());
 	}
@@ -59,7 +59,7 @@ class Validators extends \Nette\Utils\Validators
 				'from' => $date,
 				'to' => $date2
 			]);
-		} catch (Exception $e) {
+		} catch (Exception $_) {
 			return FALSE;
 		}
 	}
@@ -90,7 +90,7 @@ class Validators extends \Nette\Utils\Validators
 
 		try {
 			new DateTime($value);
-		} catch (Exception $e) {
+		} catch (Exception $_) {
 			return FALSE;
 		}
 
